@@ -18,6 +18,6 @@ from django.urls import path
 from krypton_main import views
 
 urlpatterns = [
-    path('', views.krypton_main),
+    path('', views.krypton_index),
 
 ]

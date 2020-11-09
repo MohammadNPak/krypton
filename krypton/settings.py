@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'krypton_users.apps.UsersConfig',
     'krypton_main',
+    'krypton_products',
 
 ]
 

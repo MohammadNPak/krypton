@@ -13,12 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
 
-from krypton_main import urls as krypton_main_url
+from krypton_main.views import krypton_index
+from krypton_users.views import krypton_login, krypton_signup
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(krypton_main_url)),
+    path('', krypton_index, name='index'),
+    path('login', krypton_login, name='login'),
+    path('signup', krypton_signup, name='signup'),
 
 ]
